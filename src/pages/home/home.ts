@@ -12,6 +12,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getPengguna();
+    // this.getPost();
   }
 
   getPengguna() {
@@ -21,5 +22,7 @@ export class HomePage {
       console.log(this.users);
     });
   }
+
+  
 
 }

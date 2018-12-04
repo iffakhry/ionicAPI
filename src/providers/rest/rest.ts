@@ -27,6 +27,16 @@ export class RestProvider {
     });
   }
 
+  getPost(id) {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl+'/posts/'+id).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
   addUser(data) {
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl+'/users', JSON.stringify(data))
